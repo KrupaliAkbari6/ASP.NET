@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\sem-3\\ASP.NET\\Student_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|d:\\sem-3\\asp.net\\student_project\\student_project\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|solutionrelative:student_project\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Views\\Student\\About.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|solutionrelative:Student_Project\\Views\\Student\\About.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Views\\Student\\Contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|solutionrelative:Student_Project\\Views\\Student\\Contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Controllers\\StudentController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|solutionrelative:Student_Project\\Controllers\\StudentController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF795AEA-82DB-4900-B93B-AD4163822579}|Student_Project\\Student_Project.csproj|solutionrelative:Student_Project\\Models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Views\\Student\\About.cshtml",
+              "RelativeDocumentMoniker": "Student_Project\\Views\\Student\\About.cshtml",
+              "ToolTip": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Views\\Student\\About.cshtml",
+              "RelativeToolTip": "Student_Project\\Views\\Student\\About.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-03T12:49:34.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Views\\Student\\Contact.cshtml",
+              "RelativeDocumentMoniker": "Student_Project\\Views\\Student\\Contact.cshtml",
+              "ToolTip": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Views\\Student\\Contact.cshtml",
+              "RelativeToolTip": "Student_Project\\Views\\Student\\Contact.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-03T12:23:03.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "Student_Project\\Views\\Student\\Index.cshtml",
+              "ToolTip": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Views\\Student\\Index.cshtml",
+              "RelativeToolTip": "Student_Project\\Views\\Student\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-03T12:22:00.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Student_Project\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Student_Project\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBUAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T12:20:30.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "student.cs",
+              "DocumentMoniker": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Models\\student.cs",
+              "RelativeDocumentMoniker": "Student_Project\\Models\\student.cs",
+              "ToolTip": "D:\\sem-3\\ASP.NET\\Student_Project\\Student_Project\\Models\\student.cs",
+              "RelativeToolTip": "Student_Project\\Models\\student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T12:19:58.219Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
