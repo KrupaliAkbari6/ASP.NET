@@ -13,7 +13,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <div>
+        @helper MyData(string[] temp)
+        {
+            <ul>
+                @foreach (var item in temp)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        }
+    </div>
+
+        <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -43,9 +55,15 @@
                     <td>@Model.City</td>
                     <td>@Model.Division</td>
                 </tr>
-               
+
             </tbody>
         </table>
+
+
+        <div>
+            <h2>Country List</h2>
+            @MyData(new string[] {"India","USA","UK"})
+        </div>
     </div>
 </body>
 </html>

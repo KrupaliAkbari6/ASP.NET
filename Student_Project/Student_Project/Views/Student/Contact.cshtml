@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Student_Project.Models.student>
 @{
     Layout = null;
 }
@@ -14,8 +14,7 @@
 
 </head>
 <body>
-    <div>
-       
+    
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-light">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -31,7 +30,32 @@
                 </ul>
             </nav>
             <h2>Contact Page</h2>
+            <div>
+                <table class="table table-danger table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>Division</th>
+                        </tr>
+                    </thead>
+                    @foreach (var item in Model)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>@item.City</td>
+                                <td>@item.Division</td>
+                            </tr>
+
+                        </tbody>
+                    }
+
+                </table>
+            </div>
         </div>
-        </div>
+        
 </body>
 </html>

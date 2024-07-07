@@ -25,11 +25,19 @@ namespace Student_Project.Controllers
             ViewBag.name = new List<string>() { "Krupali", "Neha", "Vishakha", "Isha", "Kruti" };
             ViewBag.city = new List<string>() { "Rajkot", "Gondal", "Rajkot", "Gondal", "Rajkot" };
             ViewBag.division = new List<string>() { "A", "A", "A", "B", "B" };
+
+            ViewData["Country"] = new List<string>() { "India" ,"USA","UK"};
             return View();
         }
         public ActionResult Contact()
         {
-            return View();
+            List<student> s = new List<student>
+            {
+                new student() { Id =11,Name="Krupali",City="Rajkot",Division="A"},
+                new student() { Id =12,Name="Isha",City="Rajkot",Division="A"},
+                new student() { Id =13,Name="Neha",City="Rajkot",Division="A"}
+            };
+            return View(s);
         }
     }
 }
