@@ -18,5 +18,7 @@ namespace ModelProject.Controllers
             s.City = "Rajkot";
             return View(s);
         }
+
+        
     }
 }
