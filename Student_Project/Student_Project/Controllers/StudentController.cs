@@ -39,5 +39,17 @@ namespace Student_Project.Controllers
             };
             return View(s);
         }
+
+        public ActionResult Registration()
+        {
+            student s = new student();
+            return View(s);
+        }
+        [HttpPost]
+
+        public ActionResult Registration(student s)
+        {
+            return View(s);
+        }
     }
 }

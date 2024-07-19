@@ -11,5 +11,12 @@ namespace Student_Project.Models
         public string Name { get; set; }
         public string City { get; set; }
         public string Division { get; set; }
+
+        public string fname { get; set; }
+        public string lname { get; set; }
+        public string address { get; set; }
+        public string gender { get; set; }
+        public string City2 { get; set; }
+
     }
 }
