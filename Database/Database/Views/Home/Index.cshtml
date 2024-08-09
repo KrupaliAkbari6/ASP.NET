@@ -1,0 +1,32 @@
+﻿@model List<Database.Models.Student>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row">
+    <table class="table tabel-bordered">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>City</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.City</td>
+                    <td><button type="submit" class="btn btn-outline-secondary">@Html.ActionLink("Edit", "Registration", new { id = @item.Id })</button></td>
+                    <td><button type="submit" class="btn btn-outline-secondary">@Html.ActionLink("Delete", "Delete", new { id = @item.Id })</button></td>
+                </tr>
+            </tbody>
+        }
+    </table>
+</div>
