@@ -32,21 +32,24 @@ namespace Database.Controllers
 
         public ActionResult Registration(int? id)
         {
-            MydbEntities db = new MydbEntities();
-            Student s = new Student();
-            if(id.HasValue)
+            
+            if(id!=0)
             {
-                s = db.Students.Find(id);
+                MydbEntities db = new MydbEntities();
+                Student s = db.Students.Find(id);
+                return View(s);
             }
-
-            return View(s);
+            else {
+                return View(); 
+            }
+           
         }
         [HttpPost]
         public ActionResult Registration(Student s)
         {
-            MydbEntities db = new MydbEntities();   
-            
-            if(s.Id==0)
+            MydbEntities db = new MydbEntities();
+
+            /*if(s.Id==0)
             {
                 db.Students.Add(s);
             }
@@ -55,6 +58,20 @@ namespace Database.Controllers
                 Student ss = db.Students.Find(s.Id);
                 ss.Name = s.Name;
                 ss.City = s.City;
+            }*/
+
+            if (s.Id != 0)
+            {
+                /*Update code*/
+                Student ss = db.Students.Find(s.Id);
+                ss.Name = s.Name;
+                ss.City = s.City;
+               
+            }
+            else
+            {
+               /* Add code*/
+                db.Students.Add(s);
             }
             db.SaveChanges();
             return RedirectToAction("Index");
