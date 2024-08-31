@@ -3,30 +3,62 @@
     ViewBag.Title = "Home Page";
 }
 
+<!-- Search Form -->
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    <div>
+        @Html.TextBox("searchTerm", Request.QueryString["searchTerm"], new { @class = "form-control", placeholder = "Search by name or city" })
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+}
 
-
+<br />
+<h3>Details</h3>
 <div class="row">
-    <table class="table tabel-bordered">
-        <thead>
-            <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>City</td>
-                <td>Edit</td>
-                <td>Delete</td>
-            </tr>
-        </thead>
-        @foreach (var item in Model)
-        {
-            <tbody>
+    @using (Html.BeginForm("DeleteSelected", "Home", FormMethod.Post))
+    {
+        <table class="table table-bordered">
+            <thead>
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Name</td>
-                    <td>@item.City</td>
-                    <td><button type="submit" class="btn btn-outline-secondary">@Html.ActionLink("Edit", "Registration", new { id = @item.Id })</button></td>
-                    <td><button type="submit" class="btn btn-outline-secondary">@Html.ActionLink("Delete", "Delete", new { id = @item.Id })</button></td>
+                    <td>Select</td>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>City</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
                 </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><input type="checkbox" name="selectedIds" value="@item.Id" /></td>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.City</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Registration", new { id = item.Id }, new { @class = "btn btn-outline-secondary" })
+                        </td>
+                        <td>
+                            <!-- Optional: If you want to include individual delete functionality -->
+                            @*<a href="@Url.Action("Delete", "Home", new { id = item.Id })" class="btn btn-danger">Delete</a>*@
+                        </td>
+                    </tr>
+                }
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="6" class="text-center">No results found</td>
+                    </tr>
+                }
             </tbody>
-        }
-    </table>
+            <tfoot>
+                <tr>
+                    <td colspan="6">
+                        <button type="submit" class="btn btn-danger">Delete Selected</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    }
 </div>

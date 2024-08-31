@@ -9,12 +9,18 @@ namespace Database.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm)
         {
             MydbEntities db = new MydbEntities();
-            List<Student> std = db.Students.ToList();
-            return View(std);
+            var std = db.Students.AsQueryable();
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                std = std.Where(s => s.Name.Contains(searchTerm) || s.City.Contains(searchTerm));
+            }
+            return View(std.ToList());
         }
+
+
 
         public ActionResult About()
         {
@@ -86,5 +92,26 @@ namespace Database.Controllers
             return RedirectToAction("Index");
 
         }
+
+        [HttpPost]
+        public ActionResult DeleteSelected(int[] selectedIds)
+        {
+            MydbEntities db = new MydbEntities();
+            if (selectedIds != null)
+            {
+                foreach (int id in selectedIds)
+                {
+                    Student stud = db.Students.Find(id);
+                    if (stud != null)
+                    {
+                        db.Students.Remove(stud);
+                    }
+                }
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
