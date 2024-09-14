@@ -6,10 +6,15 @@
 <!-- Search Form -->
 @using (Html.BeginForm("Index", "Home", FormMethod.Get))
 {
-    <div>
-        @Html.TextBox("searchTerm", Request.QueryString["searchTerm"], new { @class = "form-control", placeholder = "Search by name or city" })
-        <button type="submit" class="btn btn-primary">Search</button>
-    </div>
+<div>
+
+    Name @Html.RadioButton("search", "Name", Request.QueryString["search"] == "ABC")
+    City @Html.RadioButton("search", "City", Request.QueryString["search"] == "City")<br /><br />
+    @Html.TextBox("searchBy",Request.QueryString["searchBy"], new { @class = "form-control", placeholder = "Search by name or city " })<br />
+    <button type="submit" class="btn btn-primary">Search</button><br/>
+  
+
+</div>
 }
 
 <br />
@@ -20,7 +25,6 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <td>Select</td>
                     <td>ID</td>
                     <td>Name</td>
                     <td>City</td>
@@ -31,19 +35,21 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td><input type="checkbox" name="selectedIds" value="@item.Id" /></td>
-                        <td>@item.Id</td>
-                        <td>@item.Name</td>
-                        <td>@item.City</td>
-                        <td>
-                            @Html.ActionLink("Edit", "Registration", new { id = item.Id }, new { @class = "btn btn-outline-secondary" })
-                        </td>
-                        <td>
-                            <!-- Optional: If you want to include individual delete functionality -->
-                            @*<a href="@Url.Action("Delete", "Home", new { id = item.Id })" class="btn btn-danger">Delete</a>*@
-                        </td>
-                    </tr>
+                <tr>
+
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.City</td>
+                    <td>
+                        <button class="btn btn-secondary">@Html.ActionLink("Edit", "Registration", new { id = item.Id }, new { @class = "btn btn-outline-secondary" })</button>
+                    </td>
+                    <td>
+                        <!-- Optional: If you want to include individual delete functionality -->
+                        @*<a href="@Url.Action("Delete", "Home", new { id = item.Id })" class="btn btn-danger">Delete</a>*@
+                    <input type="checkbox" name="selectedIds" value="@item.Id" />
+                    </td>
+
+                </tr>
                 }
                 @if (!Model.Any())
                 {

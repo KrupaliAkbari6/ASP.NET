@@ -1,0 +1,12 @@
+1. add the user(condition if one time login then second time not login)
+2. 
+
+
+registration form
+username
+password
+confirm password
+fname
+lname
+city
+gender 

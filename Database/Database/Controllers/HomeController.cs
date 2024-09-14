@@ -9,18 +9,33 @@ namespace Database.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(string searchTerm)
+        public ActionResult Index(string searchBy , string search)
         {
+            // search by Name or City
+           /* MydbEntities db = new MydbEntities();
+            
+            var std = db.Students.Where(s =>s.Name.Contains(searchBy) || s.City.Contains(searchBy)).ToList();
+
+            return View(std);*/
+
+            //search By RadioButton
+
+            /*List<Student> std = new List<Student>();*/
+
             MydbEntities db = new MydbEntities();
-            var std = db.Students.AsQueryable();
-            if (!string.IsNullOrEmpty(searchTerm))
+            if (search == "ABC")
             {
-                std = std.Where(s => s.Name.Contains(searchTerm) || s.City.Contains(searchTerm));
+                List<Student> std = new List<Student>();
+                std = db.Students.Where(s => s.Name.Contains(searchBy)).ToList();
+                return View(std);
             }
-            return View(std.ToList());
+            else if (search == "City" )
+            {
+                List<Student> std = new List<Student>();
+                std = db.Students.Where(s => s.City.Contains(searchBy)).ToList();
+                return View(std);
+            }
         }
-
-
 
         public ActionResult About()
         {
@@ -30,6 +45,13 @@ namespace Database.Controllers
         }
 
         public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Login()
         {
             ViewBag.Message = "Your contact page.";
 
