@@ -133,10 +133,31 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Registration.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registration.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registration.cs">
+      <DependentUpon>Registration.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registration.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registration1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registration.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Student.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Student.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Student.cs">
+      <DependentUpon>Registration.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -163,6 +184,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Registration.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Registration.edmx</DependentUpon>
+      <LastGenOutput>Registration.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Registration.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Registration.edmx</DependentUpon>
+      <LastGenOutput>Registration1.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Student.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Student.edmx</DependentUpon>
@@ -181,6 +212,13 @@
     </EntityDeploy>
     <Content Include="Models\Student.edmx.diagram">
       <DependentUpon>Student.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Registration.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Registration.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Registration.edmx.diagram">
+      <DependentUpon>Registration.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -208,7 +246,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Registration.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

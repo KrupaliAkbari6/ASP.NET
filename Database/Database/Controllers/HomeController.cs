@@ -51,13 +51,6 @@ namespace Database.Controllers
             return View();
         }
 
-        public ActionResult Login()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
         public ActionResult Registration(int? id)
         {
             
